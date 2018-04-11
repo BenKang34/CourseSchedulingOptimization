@@ -25,14 +25,14 @@ This rate will then be summed over all course sections, rooms, days of the week,
 ### Constraints
 The constraints for this optimization problem are as follows:
 * Classroom capacity – the room capacity should be bigger than the number of registered students, with a 10% margin
-* Example: if 40 students are registered, there should be at least 44 seats available in the room
+  * *Example: if 40 students are registered, there should be at least 44 seats available in the room*
 * Day of the week – Classes should be assigned to specific days as required in the original dataset
 * One course per room - Each room should have a maximum of 1 course for each time slot
 * Unique room - If a class has several time slots, they must all be placed in the same room
 * Time slots – making sure that the slots assigned to a class for a particular day and room will satisfy the number of slots required  
-   *Example: if the duration of a class is 90 minutes, then there should be 3 time slots assigned to it, since each slot is 30 minutes*
+  * *Example: if the duration of a class is 90 minutes, then there should be 3 time slots assigned to it, since each slot is 30 minutes*
 * Consecutive slots – the time slots assigned for the course must be consecutive
-* A 90-minute class must be from 10AM – 11:30AM for example, not 10AM-10:30AM then 11:30AM – 12:30PM
+  * A 90-minute class must be from 10AM – 11:30AM for example, not 10AM-10:30AM then 11:30AM – 12:30PM
 * Multiple day classes – If a class is offered on Mondays and Wednesdays, then the slots assigned for Monday should be the same as the slots assigned on Wednesdays (same room and time)  
   
 For this project, we did not consider any constraints pertaining to instructor preferences. We also assumed that a course historically offered on Mondays and Wednesdays will also be offered on those same days for future semesters.
