@@ -9,13 +9,13 @@ As an example, consider a room that has a capacity of 50 seats with four courses
 <div style="text-align:center"><img src="https://latex.codecogs.com/gif.latex?\frac{&space;\text{40&space;registered&space;students}}{\text{50&space;seats&space;available}}&space;=&space;80\%" title="\frac{ \text{40 registered students}}{\text{50 seats available}} = 80\%" /></div>
 This is the basic explanation of the metric. An in-depth MIP formulation of this metric will be discussed later in the report. 
 
-## General Description of MIP Formulation
+## General Description of MIP Formulation  
+### Decision Variable
 The decision variable that will be used for this optimization is X_ijkl, which is a binary variable used to determine whether a course section has been assigned to a room at a given time of the day. If the value of this variable is 1, it means that the slot has been assigned. If the value is 0, it means the slot has not been assigned. The indexes for this variable are as follows:
 * i: course + section as a unique identifier
 * j: room
 * k: day of the week from Monday to Sunday
-* l: time slot
-* L = {0, 1, …, 14} would be the index of time slots of each day from 10AM – 5PM, and each slot would be 30 minutes  
+* l: time slot {0, 1, …, 14} would be the index of time slots of each day from 10AM – 5PM, and each slot would be 30 minutes  
   
 ### Objective Function
 The objective of this problem would be to maximize the utilization rate, defined as:
